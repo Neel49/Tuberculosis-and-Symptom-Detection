@@ -727,7 +727,8 @@ class FocalBCE(nn.Module):
     def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
         bce = self.bce(logits, targets)
         probs = torch.sigmoid(logits).detach()
-        focal = (1.0 - probs) ** self.gamma * bce
+        p_t = probs * targets + (1.0 - probs) * (1.0 - targets)
+        focal = (1.0 - p_t).pow(self.gamma) * bce
         return focal.mean()
 
 
