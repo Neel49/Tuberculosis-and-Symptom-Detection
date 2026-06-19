@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+pyenv/
+
+# Logs and experiment tracking
+logs/
+runs/
+*.log
+events.out.tfevents*
+
+# Model checkpoints and weights
+*.pth
+*.pt
+*.ckpt
+*.onnx
+pretrained_weights/
+checkpoint*/
+*_best_model.*
+*_best.pth
+
+# Datasets and generated dataset splits
+data_dir*/
+nih_new_directory/
+data_preparation/train/
+data_preparation/test/
+data_preparation/covid_new_directory/
+labeled*/
+fold_*/
+symptom_test/
+output_dir*/
+outputs*/
+backup*/
+
+# Generated visualizations and analysis outputs
+attention_*/
+gradcam_*/
+bbox_visualizations*/
+*_gradcam_*.png
+*_gradcam_*.jpg
+comparison_*.jpg
+*.npy
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
